@@ -1,0 +1,1 @@
+<h1>{{\Carbon\Carbon::now()->format('d/m/Y H:i:s')}}</h1>
