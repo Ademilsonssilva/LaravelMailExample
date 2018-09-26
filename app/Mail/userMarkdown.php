@@ -30,7 +30,7 @@ class userMarkdown extends Mailable
     {
         return $this->markdown('emails.user.usermarkdown')
             ->with([
-                'user' => \Auth::user(),
+                'user' => \App\User::find(1),
             ]);
     }
 }

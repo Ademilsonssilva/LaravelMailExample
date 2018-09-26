@@ -16,7 +16,10 @@ class EmailController extends Controller
 
     public function mail2()
     {
-    	\Mail::to('ademilsonssilva1@gmail.com')->send(new userMarkdown());
+        \Mail::to('ademilsonssilva1@gmail.com')->queue(new userMarkdown());
+        \Mail::to('ademilsonssilva1@gmail.com')->queue(new userMarkdown());
+    	\Mail::to('ademilsonssilva1@gmail.com')->queue(new userMarkdown());
+        return redirect()->route('translate');
     }
 
     public function envTeste()
